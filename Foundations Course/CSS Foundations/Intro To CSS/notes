@@ -1,0 +1,43 @@
+CSS Rules are made up of selectors and and declarations (which are a property value pairing)
+
+Selectors select the elements that the CSS rules apply to
+
+Universal selector is the astrisk -- > *
+
+Type selectors like selecting just a div or p or a tag select all elements of the given Type
+
+Class selectors are preceeded by a period and can be used by multiple elements that can differ as well
+
+ID selectors are different in that you can only have one element selected for an ID not multiple elements of the same Type
+
+As a side note its better to use the class selectors instead
+
+The grouping selector is any of the above but with seperation of comma like p, div{}
+
+Chaining selectors are when we give multiple tags multiple class names and then select a specific two named class or more 
+
+    You can do the same for IDs as well with classes
+
+Descendant Combinator is when we add the ancestor and then space seperation and add the descendants and it targets all the descendants as long as its a child of that parent ancestor
+
+CSS Properties
+
+Color sets text color and background-color sets the background color
+
+Font-family is font style and the first name is the font primarily used and second or third or more are in line in case the first is missing
+
+font-weight goes from 100 up to 900 normally and the increments add more boldness to the text
+
+height and width are attributes for an img tag that you can add in HTML file
+
+    to adjust the size without ruining the scale of the image we simply manually input the width and give height an auto value
+
+External CSS is creating a seperate file for CSS outside of HTML
+
+The first thing we do is add a link element within the head tag in HTML file then we use href for the relative link to the stylesheet and then rel attribute specifies the relationship between the HTML file and the linked file
+
+Internal CSS is where we add the CSS within the HTML file 
+    here you do the same as if you had a seperate css stylesheet but you open and close with "style" tags
+
+Inline css allows you to add styles directly to the HTML elements although its not recommended
+
