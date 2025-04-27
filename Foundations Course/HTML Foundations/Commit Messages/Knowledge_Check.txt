@@ -1,0 +1,4 @@
+What are two benefits of having well-written commit messages and a good commit history?
+    - It communicates context to change to code to developers and your future self
+How many characters should the subject line of your commit message be?
+    - 72

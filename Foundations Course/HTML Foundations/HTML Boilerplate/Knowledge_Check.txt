@@ -1,0 +1,16 @@
+1. What is the purpose of the doctype declaration?
+
+    - The doctype declaration tells the browser what version of HTML the document is written in, so it knows how to properly render the page.
+
+2. What is the HTML element?
+
+    - The <html> element wraps the entire content of the page and tells the browser that everything inside should be interpreted as an HTML document.
+
+3. What is the purpose of the head element?
+
+    - The <head> element contains meta-information about the document, like links to stylesheets, page titles, and metadata that isn't directly shown to users.
+
+
+4. What is the purpose of the body element?
+
+    - The <body> element holds all the visible content that users interact with, such as text, images, buttons, and links.

@@ -1,0 +1,5 @@
+1. What is an HTML tag?
+    - An HTML tag is an element of hypertext markup language. It allows us to communicate with the browser instructions on how to format some text.
+
+2. What are the three parts of an HTML element?
+    - The opening tag, some text, the closing tag.

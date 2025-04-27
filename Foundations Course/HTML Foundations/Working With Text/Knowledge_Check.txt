@@ -1,0 +1,16 @@
+1. How do you create a paragraph in HTML?
+    - <p></p>
+2. How do you create a heading in HTML?
+    - <h1></h1> up to h6
+3. How many different levels of headings are there and what is the difference between them?
+    - There are six headings and they progressively get smaller in size 
+4. What element should you use to make text bold and important?
+    - <strong></strong>
+5. What element should you use to make text italicized to add emphasis to it?
+    - <em></em>
+6. What relationship does an element have with any nested elements within it?
+    - parent/child
+7. What relationship do two elements have if they are at the same level of nesting?
+    - sibblings
+8. How do you create HTML comments?
+    - <!-- -->
