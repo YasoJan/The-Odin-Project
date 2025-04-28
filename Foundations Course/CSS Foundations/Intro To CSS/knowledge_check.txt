@@ -1,0 +1,12 @@
+What is the syntax for class and ID selectors?
+    - dot for class and hashtag for ID
+How would you apply a single rule to two different selectors?
+    - group selection seperated by a comma
+Given an element that has an id of title and a class of primary, how would you use both attributes for a single rule?
+    - .primary#title
+What does the descendant combinator do?
+    - takes the descendant as the second article and the ancestor as first article seperated by a space
+What are the names of the three ways to add CSS to HTML?
+    - inline, internal, external
+What are the main differences between the three ways of adding CSS to HTML?
+    - One is within the element one is in the head of the file one is a seperate .css stylesheet
