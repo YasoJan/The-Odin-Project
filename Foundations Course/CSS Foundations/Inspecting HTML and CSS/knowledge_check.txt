@@ -1,0 +1,8 @@
+How do you select a specific element on your page with your browser’s developer tools?
+    you use f12 command
+
+What does a strikethrough in a CSS declaration mean in your browser’s developer tools?
+    an edit was made to that specifc declaration
+
+How do you change CSS in real time on specific elements of a web page with your browser’s developer tools?
+    simply click on the css in styles tab on the bottom and edit the text and you'll see a strike through below indicating a change was made to that css declaration
