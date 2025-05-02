@@ -1,0 +1,63 @@
+The Box Model
+
+Everything in CSS is in a box either rectangular or square shape
+
+    - can be any element --> its a box and these boxes have different parts
+
+    - the content of the box which can be text, the padding, the border, then margin
+
+
+content
+    - By default the size of the box is no larger than the content
+    - if you add different things to it then you can expand its size
+        - padding is one way to expand it
+
+padding
+    - padding occurs inside of the background of the element. 
+        - inside the border, and around the content of the element
+            - padding helps with background-color as well
+
+border
+    - the border is the outline of the box
+    - it goes around the padding
+
+margin
+    - Margin is what we use to space two elements apart from each other
+        - in inspect you can see in 'computed' tier at the bottom the box sizing of the element you click/highlight
+
+height
+    - top and bottom of padding + height + border top and bottom 
+        - margin doesn't get counted into height by default
+    - content-box vs border-box becomes important 
+        - content-box adds padding and border ontop of the size to make total size much larger
+        - border-box takes from the overall size and partitions to padding and border respectfully
+            - border-box is more intuitive
+
+border-box
+   🔵 content-box (default) =
+
+        - You say: width: 200px
+
+        - Browser says: "Cool. 200px for content only. Plus whatever padding and border you throw on."
+
+        - Final size = 200px + padding + border → gets bigger and bigger.
+
+        - It's dumb unless you like layout chaos.
+
+    🔴 border-box =
+
+        - You say: width: 200px
+
+        - Browser says: "200px is TOTAL. I’ll squish the content as needed to make room for padding and border inside it."
+
+        - Final size = 200px total. Always.
+
+        - It's smart and what every sane dev uses.
+
+
+
+Box-sizing: Border-box 
+
+    - use universal selector and set margin and padding and box sizing to border-box
+        - this makes life easier
+
