@@ -61,3 +61,144 @@ Box-sizing: Border-box
     - use universal selector and set margin and padding and box sizing to border-box
         - this makes life easier
 
+MDN Notes
+
+
+ The Box Model
+
+ - In CSS everything around it has a box
+
+ Block and Inline boxes
+    
+    - Boxes have an inner display type and outter display type
+    - outter display
+        - Effect how the box is laid out with respect to other boxes around it
+        - if a box has a display value of Block
+            - it will be on a new line automatically
+            - the width and height are taken into consideration
+                - By default without specifying width, the box will take up the rest of the width on the page
+            - padding, margin, and border will push other elements away from the box
+        - Default display block elements include <h1> and <p>
+        
+        - if a box has a display value of inline 
+            - the box will be on the same line
+            - width and height will not be respected
+            - Top and bottom padding margins and borders will apply but wont move other inline boxes away from the box
+                - the left and right padding margins and borders will also apply but wont cause the inline boxes away from the box
+            - Default display inline elements include <a> <span> <em> and <strong>
+        
+    Inner display types
+
+        - Inner display type dictates how elements inside the box are laid out essentially
+        - having a dislpay type of flex makes the direct children of the box flex items
+            - Grid is another example of inner display types
+        - making a ul a display flex is a great way for its direct descendants <li> to be flex items 
+
+    What is the CSS Box Model?
+
+        - it applies to boxes and how different components of a box like margin border padding and content work to make a box we see on the page
+
+            - There is the ....
+                - content box = this is the area our content is displayed
+                - padding box = sits around the content as white space
+                - border box = border wraps the content and any padding
+                - margin box = outtermost layer wrapping everything inside and serves as white space between this and other element boxes
+            
+        - confusion
+
+            - in content-box  
+                - Our height and width are declared for the content only and extra padding and border makes the height and width increase
+            - alternatively, in the border-box
+                - The height and width we specify are for the content, padding, and border all together and doesn't change once declared
+            
+            - To make matters more confusing there are ghost content that are invisble that you need to select along with the universal selector...
+
+
+                html {
+                box-sizing: border-box;
+                }
+                *,
+                *::before,
+                *::after {
+                box-sizing: inherit;
+                }
+            
+            - If you ever want to change box-sizing globally later (say, during a big refactor, or a theme swap), you only need to change it ONCE — at the html tag.
+
+            - Inheritance reduces duplicate property setting. Instead of manually forcing border-box on 5000+ elements in the DOM, you set it ONCE at html, then just inherit at child level.
+
+            - ::before and ::after are forced to behave correctly because they inherit, too.
+            
+            - 	If you want specific components (like a modal, or a form) to use content-box later, it's easier. You just override one container instead of breaking global CSS.
+
+            Setting box-sizing: border-box directly on every element is like tattooing "border-box" on every villager's forehead.
+Setting it on html and letting everyone inherit is like putting up one giant sign at the town hall that says, "We follow the border-box law here."
+
+
+
+    Margins
+
+        - We can control margins with 
+            - margin-top, margin-right, margin-bottom, margin-left
+                - This is the long hand method
+        - The margin can make the box move around the page by pushing it around due to creating or removing space around it
+    
+    Margin Collapsing
+
+        - When two elements have margins that touch...
+            - if both are positive, it will combine to be one margin and the size will take on the largest individual margin
+            - if both are negative, the smallest value will be the size
+            - if one is positive and one is negative it will be subtracted from the total
+        
+    borders
+
+        - Its between the margin and the padding of a box
+        - you can set the properties of each side of the border like this
+            - border-top, border-right, border-bottom, border-left
+        - you can also set other properties like
+            - border-width, border-style, border-color
+        
+            - to be more specific you can set properties for sides
+                    border-top-width
+                    border-top-style
+                    border-top-color
+                    border-right-width
+                    border-right-style
+                    border-right-color
+                    border-bottom-width
+                    border-bottom-style
+                    border-bottom-color
+                    border-left-width
+                    border-left-style
+                    border-left-color
+            
+    
+    padding
+
+        - Padding is between the content and border area
+        - You can't have negative padding 
+        - you can specify for sides
+                padding-top
+                padding-right
+                padding-bottom
+                padding-left
+    
+    The box model and inline boxes
+        - A span is an inline element and so does not respect width and height.
+
+        - So we use inline-block as a display which is a hybrid of inline and block
+            - it doesn't break onto a new line but it respects height and width and avoids overlapping
+
+        - why not just use inline-block and block only to get the best of both worlds rather than using inline? 
+            - Great and avoids overflow problem
+
+    Margins in depth
+
+        - Why does margin: 0 auto; center divs horiztonally?
+
+            - because it makes top an bottom margin 0, and left and right margin auto which tells it to distribute left over space equally left and right
+
+            - So essentially I can write margin: 5px auto; and it will give me top and bottom margin of 5px and center it horizontally because auto distributes the left and right margin spaces equally
+
+    
+        
