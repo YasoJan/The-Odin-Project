@@ -1,0 +1,28 @@
+From inside to outside, what is the order of box-model properties?
+    - content, padding, border, margin
+What does the box-sizing CSS property do?
+    - tells it to use the default content-box or border-box box-sizing
+What is the difference between the standard and alternative box model?
+    - alternative/border-block box sizing will make the set height and width permanent for the size of the box and any extra padding or borders will not add to its size but take up larger portions of the box if specified.
+    - Standard/content- box sizing is the default for many html elements and will add bloat to the size of the content with padding and borders atop the existing height and width of the content
+Would you use margin or padding to create more space between 2 elements?    
+    - I would use margin as that is the white space between the two elements
+Would you use margin or padding to create more space between the contents of an element and its border?
+    - Padding as its between the content and border
+Would you use margin or padding if you wanted two elements to overlap each other?
+    - margin -- as this causes margin collapsing
+        - If both are positive then the largest is chosen, if both are negative, the smallest is choosen, if both are different polarities, then we subtract from the positive one and that is our total margin selected
+How do you set the alternative box model for all of your elements?
+    - universal selectors inherit from html and now we can change box-sizing with one declaration for all elements and ghost content (before,after universal selector)
+
+
+    html{
+        box-sizing: border-box;
+    }
+    *,
+    *::before,
+    *::after{
+        box-sizing: inherit
+    }
+How do you center an element horizontally?
+    - margin: 0 auto; auto will automatically distribute the whitespace on the left and right sides evenly
