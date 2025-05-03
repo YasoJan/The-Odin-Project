@@ -1,0 +1,17 @@
+What is the difference between a block element and an inline element?
+    - block level elements are stacked atop each other while inline elements are placed on the same horizontal axis as the previous element
+
+What is the difference between an inline element and an inline-block element?
+    - inline elements don't respect width or height and act funky with left and right margin and padding while inline-block is a hybrid of elements on the same horizontal line and also behave like blocks with their respect to width and height and padding and margin
+
+Is an h1 block or inline?
+    - h1 is a block 
+
+Is button block or inline?
+    - a button is an inline element 
+
+Is div block or inline?
+    - a div is a block
+
+Is span block or inline?
+    - a span is inline
