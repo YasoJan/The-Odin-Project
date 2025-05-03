@@ -1,0 +1,22 @@
+Block and Inline
+
+CSS has two box types: Block and Inline
+    - You can modify the box calculation using display and selecting either or 
+
+The default is block display where block elements are stacked ontop of each other
+
+Inline elements are the alternative and are in the same horizontal line with whatever elements its placed with
+
+Padding and Margin act funky on inline elements & width and height are not respected
+    - top and bottom ones work but left and right don't act consistently across the board
+        - For this reason its good to use a hybrid of block and inline called "inline-block"
+            - It'll be on the same horizontal line and behave like a block with padding and Margin      
+                - It's likely though you'd use flexbox though over inline-block
+            
+Generic boxes
+    - examples of generic boxes include span and div
+        - Div is a block level element and span is an inline level element
+            - They give no meaning to their content -- they just contain things
+
+Normal Flow MDN
+
