@@ -1,0 +1,5 @@
+What’s the difference between a flex container and a flex item?
+    - Flex container must go to the parent container and the flex items must be nested within It
+
+How do you create a flex item?
+    - you give its flex container a display of flex and nest the item within it
