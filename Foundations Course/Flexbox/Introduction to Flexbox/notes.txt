@@ -1,0 +1,13 @@
+Introduction to Flexbox
+
+Flexbox has become the default way of positioning elements for a lot of people
+
+For flexbox learning you can use chrome dev tools to inspect elements that have flexbox and learn about all its attributes etc.
+
+You need a flex container to house flex items
+
+    - the flex container should have display: flex on items
+
+    - Any element can be both a flex container and a flex item
+
+    - Nesting multiple flex containers and items is how you can create a complex webpage
