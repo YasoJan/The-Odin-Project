@@ -1,4 +1,5 @@
-FreeCodeCamp Flexbox Lecture Video
+FreeCodeCamp CSS Flexbox Course Lecture Video
+Link: https://www.youtube.com/watch?v=-Wlt8NRtOpo
 
 1. flex items are direct children of a flex container 
     - A flexbox layout is declared with display: flex to the parent container
