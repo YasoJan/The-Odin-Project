@@ -1,0 +1,7 @@
+What are the 3 values defined in the shorthand flex property (e.g. flex: 1 1 auto)?
+    - Flex grow, Flex shrink, flex basis
+
+What are the 3 defined values for the flex shorthand flex:auto?
+    - 1 1 auto;
+        - flex-basis auto simply means start at whatever natural size you would normally ned, but if extra space is available-- grow or if its tight -- shrink
+        flex: auto is 'natural first, flexible always.
