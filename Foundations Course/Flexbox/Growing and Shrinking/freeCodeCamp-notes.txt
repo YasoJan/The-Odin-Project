@@ -1,0 +1,62 @@
+FreeCodeCamp Flexbox Lecture Video
+
+1. flex items are direct children of a flex container 
+    - A flexbox layout is declared with display: flex to the parent container
+    - By default it is horizontal layout and at the left 
+
+2. Main Axis and Cross Axis
+    - Main Axis is horizontal and cross axis is verticle by default case
+    - flex-direction: row is the default and sets us up horizontally
+        - flex-direction: column sets us up like a box stacked atop each other vertically
+
+3. Justify Content
+    - justify-content: flex-start is default
+        - this puts our flex items squished to the start of the main axis 
+        - flex-end you can imagine squishes to the end of the main axis
+        - space-around puts equal amount of space on left and right or top and bottom depending on flex-direction (default is row so it'd be left to right since main axis is horizontal)
+            - there is also space between and space evenly --> test them out for yourself.
+    
+4. Positioning Items
+    - IF you want custom positioning you would need to have a mix of justify-content and margin positioning
+    - For example to move all items to the start of the main axis and one item all the way to the right 
+        - justify-content: flex start
+        - then target the one element with a class
+            - then margin-left: auto so it pushes the item all the way to the right
+    - conclusion: try a mix of justify-content and margin to accomplish custom positioning
+
+5. The Flex Property
+    - flex: 1 --> makes all flex items the same size and grow and shrink responsively
+        - flex-grow flex-shrink flex-basis are the long hand of the short hand "flex"
+    - Benefit: with defining flex you don't have to change the width everytime you add an item, it will responsively make room for it
+    - you can make one item flex: 2 and it will be twice as large as the other items responsively
+
+6.  Align Items
+    - Now that we know how to control items across the main axis --> we need to control items across the cross axis (verticle)
+    - align-items: stretch; is the default which takes up the whole height of the viewport
+        - flex-start pushes the items up to the top 
+        - flex-end pushes it downwards
+        - center --> flexbox is great for centering an item inside a container
+    - lets say that we have one item 
+        - justify-content: center; align-items: center; 
+            - this will center your item responsively in its container at any size
+
+7. Flex Direction column   
+    - flex-direction: column; 
+        - The items might take up the entire container in height
+            - so to fix this we need to specify the height of the container to take up the entire viewport if we want space
+        - height: 100%; --> this will achieve what we want 
+            - when we do this we need to set the height of the html and body to 100% as well so it takes up the entirety of the viewport
+    -  remember when you specify flex-direction as column
+        - the main axis is vertical and the cross axis is horizontal
+            justify-content (vertical) align items (horizontal)
+
+8. Wrapping Items 
+    - explicit width declaration will not scale responsively
+        - Because flex-wrap: nowrap; is default
+            - meaning you can only have one row or one column along your main axis
+        - But if we change it to flex-wrap: wrap;
+            - it will wrap the content and responsively create a new line so to speak and wrap it
+                - so this combo will keep the container one size but wrap the items so it stacks if need be 
+        
+9. Flex, grow, shrink, basis 
+    - 
