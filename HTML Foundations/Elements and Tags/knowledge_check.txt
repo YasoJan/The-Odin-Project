@@ -1,0 +1,4 @@
+What is an HTML tag?
+  - Tags act like containers. They tell you something about the information that lies between their opening and closing tags
+What are the three parts of an HTML element?
+  - opening tag, inner content, closing tag 

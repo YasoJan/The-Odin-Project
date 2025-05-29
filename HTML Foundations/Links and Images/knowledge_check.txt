@@ -1,0 +1,11 @@
+What element is used to create a link?
+  - anchor elements
+What is an attribute?
+  - An HTML attribute gives additional information to an HTML element and always goes in the element’s opening tag.
+What attribute tells links where to go to?
+What security considerations must be taken if you wish to use the target attribute to open links in a new tab/window?
+What is the difference between an absolute and relative link?
+Which element is used to display an image?
+What two attributes do images always need to have?
+How do you access a parent directory in a filepath?
+What are the four main image formats that you can use for images on the web?
