@@ -3,9 +3,19 @@ What element is used to create a link?
 What is an attribute?
   - An HTML attribute gives additional information to an HTML element and always goes in the element’s opening tag.
 What attribute tells links where to go to?
+  - href
 What security considerations must be taken if you wish to use the target attribute to open links in a new tab/window?
+  - noopener: The noopener value of the rel attribute ensures that a link opened in a new tab or window cannot interact with or access the original page. Without it, the new page can use JavaScript to manipulate the original page, which poses a security risk.
 What is the difference between an absolute and relative link?
+  - Links to pages on other websites on the internet.
+    - absolute
+  - Links to pages located on our own websites.
+    - relative
 Which element is used to display an image?
+  - <img>
 What two attributes do images always need to have?
+  - src and alt 
 How do you access a parent directory in a filepath?
-What are the four main image formats that you can use for images on the web?
+  - ../
+What are the four main image formats that you can use for images on the web? 
+  - jpeg, gif, png, svg

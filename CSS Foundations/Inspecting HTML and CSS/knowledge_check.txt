@@ -1,0 +1,8 @@
+How do you select a specific element on your page with your browser’s developer tools?
+  - ✔️ You can use the “Select Element” (mouse pointer icon) in the Developer Tools to click on any element on the page, or browse the HTML tree in the “Elements” tab to select it manually.
+🔧 This gives you access to both the HTML and all applied CSS styles
+What does a strikethrough in a CSS declaration mean in your browser’s developer tools?
+  - ✔️ Yes—strikethrough means the rule is inactive because it was overridden by another CSS rule with higher specificity or importance (!important, inline styles, etc.).
+How do you change CSS in real time on specific elements of a web page with your browser’s developer tools?
+  - you can click the element and type in something to overwrite the current code
+    - In the “Elements” tab, select the element, then in the “Styles” pane, you can click on any existing CSS property to edit it, or add new ones directly. Changes reflect immediately in the browser but are not saved to the actual file—just live preview.
