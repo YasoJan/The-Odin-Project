@@ -1,0 +1,24 @@
+From inside to outside, what is the order of box-model properties?
+    - padding, margin, border
+What does the box-sizing CSS property do?
+    - It controls how the total width and height of an element is calculated.
+	•	content-box (default):
+width = content only
+(padding + border get added outside of the width)
+	•	border-box (alternative):
+width = content + padding + border all within the specified width
+What is the difference between the standard and alternative box model?
+    - content-box
+        - width + padding + border
+    - border-box
+        - width = total
+Would you use margin or padding to create more space between 2 elements?
+    - margin
+Would you use margin or padding to create more space between the contents of an element and its border?
+    - padding
+Would you use margin or padding if you wanted two elements to overlap each other?
+    - margin negative
+How do you set the alternative box model for all of your elements?
+    - box-sizing: border-box
+How do you center an element horizontally?
+    - margin: 0 auto;
