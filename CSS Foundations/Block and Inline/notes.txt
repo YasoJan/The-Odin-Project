@@ -1,0 +1,5 @@
+Most things are blocks
+  - a paragraph is a block
+    - block level elements stack on top of each other even if they have horizontal room
+      - they take up all the available space they can
+        - 

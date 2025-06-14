@@ -1,0 +1,12 @@
+What is the difference between a block element and an inline element?
+- block has vertical margin and padding and can start on a new line
+What is the difference between an inline element and an inline-block element?
+- inline does not have vertical margin and padding and does not start on a new line
+Is an h1 block or inline?
+- block 
+Is button block or inline?
+- inline-block
+Is div block or inline?
+- block
+Is span block or inline?
+- inline
