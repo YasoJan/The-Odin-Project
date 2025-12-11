@@ -8,22 +8,86 @@ body {
   height: 72px;
   background: darkmagenta;
   color: white;
+
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
-}
 
 .sidebar {
-  width: 300px;
+
   background: royalblue;
   box-sizing: border-box;
+height: 84vh;
+  width: 19rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
+.card-container{
 
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 50rem;
+  height: 35rem;
+  justify-content: flex-start;
+  align-self: center;
+  margin-left: 3rem;
+}
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  padding: .5rem;
+  height: 10rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  
+  
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding: 0;
+  height: 15rem;
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+   
+}
+
+.footer {
+  height: 65px;
+  background: #eee;
+  color: darkmagenta;
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
