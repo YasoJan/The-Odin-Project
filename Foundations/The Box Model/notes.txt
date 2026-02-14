@@ -1,0 +1,18 @@
+Everything in "CSS" is a box
+
+Padding --> occurs on the inside of the background of the element. It goes around the content of the element.
+
+Border --> The outer layer of the box 
+
+Margin --> Outside of our border 
+
+Box Model --> In the box model margin collapses between two elements near each other! If the two elements have different margins, the larger one will be used!
+
+    - Box Model additionally makes height and width specific to the content inside the box not the box itself. To change this you must specify  
+
+      box-sizing: border-box;
+
+margin: auto; --> centers a box
+
+
+
