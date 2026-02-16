@@ -14,16 +14,13 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,.1);
   display: flex;
   flex-direction: row;
-  border: 2px solid red;
   justify-content: space-between;
 }
 .left-side{
   display: flex;
-  border: 2px solid black;
 }
 .right-side{
   display: flex;
-  border: 2px solid black;
   gap: 2rem;
   align-items: center;
 }
