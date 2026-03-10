@@ -1,4 +1,6 @@
 
+let darkness = 0;
+
 function createDivs(){
   const container = document.querySelector(".container");
   for(let i =0; i < (16 * 16); i++){
@@ -10,7 +12,10 @@ function createDivs(){
       let color1 = Math.floor(Math.random() * 255);
       let color2 = Math.floor(Math.random() * 255);
       let color3 = Math.floor(Math.random() * 255);
-      div.style.backgroundColor = "rgb(" +color1 + ", " + color2 + ", " + color3 + ")";
+      if(darkness < 100){
+        darkness +=10;
+      }
+      div.style.backgroundColor = "rgb(" +color1 + ", " + color2 + ", " + color3 +", " + darkness + "%)";
 });
   }
 }
@@ -41,7 +46,10 @@ function resetGrid(){
       let color1 = Math.floor(Math.random() * 255);
       let color2 = Math.floor(Math.random() * 255);
       let color3 = Math.floor(Math.random() * 255);
-      div.style.backgroundColor = "rgb(" +color1 + ", " + color2 + ", " + color3 + ")";
+      if(darkness < 100){
+        darkness +=10;
+      }
+      div.style.backgroundColor = "rgb(" +color1 + ", " + color2 + ", " + color3 +", " + darkness + "%)";
 });
   }
 }
@@ -53,6 +61,7 @@ resetButton.addEventListener("click", resetGrid);
 
 
 /*
-Rather than squares being the same color throughout the grid, randomize the squares’ RGB values with each interaction.
+Additionally, implement a progressive darkening effect where each interaction darkens the square by 10%. 
+The goal is to achieve a fully black (or completely colored) square in only ten interactions.
 */
 
