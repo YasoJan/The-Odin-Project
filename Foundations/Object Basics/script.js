@@ -115,11 +115,13 @@ For example:
 */
 
   function groupById(arr){
-    let usersById;
-    arr.reduce(function(arr){
-      arr.id
-
-  )};
+    return arr.reduce((result, curr_obj) => {
+      result[curr_obj.id] = curr_obj;
+      return result;
+     // return curr_obj.id + ": " + {"id": curr_obj.id,  "name": curr_obj.name, "age": curr_obj.age};
+    }, {});
+    
+  }
 
   let users = [
     {id: 'john', name: "John Smith", age: 20},
@@ -128,7 +130,7 @@ For example:
   ];
 
   let usersById = groupById(users);
-
+  console.log(usersById);
   /*
   // after the call we should have:
 
@@ -141,5 +143,5 @@ For example:
 
   //TODO use reduce()
 
-
   // array.reduce((accumulator, currentValue) => {}, initialValue)
+
