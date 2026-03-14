@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 20vw;
+  background-color: grey;
+  border: 1px solid #383838;
+  border-radius: 5px;
+  
+}
+.visual{
+  display: flex;
+  overflow: hidden;
+  height: 25%;
+  width: 100%;
+  background-color: #575151;
+  color: white;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+  font-size: 50px;
+}
+.top-row, .second-row, .third-row, .fourth-row, .fifth-row{
+  display: flex;
+  height: 15%;
+  width: 100%; 
+  background-color: #807a7a;
+}
+.top-row{
+  background-color: #666060;;
+}
+.ac, .negate, .percent, .division, .seven, .eight, .nine, .multiplication, .four, .five, .six, .subtraction, .one, .two, .three, .addition, .zero, .decimal, .equal{
+  color: white;
+  display: flex;
+  background-color: #807a7a;
+  border: .75px solid #575151;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ac:hover, .negate:hover, .percent:hover, .division:hover, .seven:hover, .eight:hover, .nine:hover, .multiplication:hover, .four:hover, .five:hover, .six:hover, .subtraction:hover, .one:hover, .two:hover, .three:hover, .addition:hover, .zero:hover, .decimal:hover, .equal:hover{
+  cursor: pointer;
+}
+.zero{
+  width: 50%;
+}
+
+.division, .multiplication, .subtraction, .addition, .equal{
+  background-color: #ff9f05;
+}
