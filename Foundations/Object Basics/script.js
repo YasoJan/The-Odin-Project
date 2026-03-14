@@ -145,3 +145,94 @@ For example:
 
   // array.reduce((accumulator, currentValue) => {}, initialValue)
 
+const multiply = function(arr) {
+//take an array of numbers and multiply all the numbers together
+  const mutliple = arr.reduce((total, item) => {
+    total = (total * item);
+    return total;
+  }, 1);
+  console.log(mutliple);
+  return mutliple;
+};
+
+let nums = [2, 4, 6, 8, 10, 12, 14];
+console.log(multiply(nums));
+
+const getTheTitles = function(arr) {
+  return arr.reduce((result, item) =>{
+    result.push(item.title)
+    return result;
+  }, []);
+};
+
+// Do not edit below this line
+//module.exports = getTheTitles;
+
+/*
+You are given an array of objects that represent books with an author and a title that looks like this:
+
+```javascript
+const books = [
+  {
+    title: 'Book',
+    author: 'Name'
+  },
+  {
+    title: 'Book2',
+    author: 'Name2'
+  }
+]
+```
+
+Your job is to write a function that takes the array and returns an array of titles:
+*/
+
+const books = [
+  {
+    title: 'Book',
+    author: 'Name'
+  },
+  {
+    title: 'Book2',
+    author: 'Name2'
+  }
+]
+console.log(getTheTitles(books));
+
+
+const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 1942,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+    ]
+
+
+const findTheOldest = function(arr) {
+  const mapped = arr.map((curr_obj, index)=>{
+    if(!Object.hasOwn(curr_obj, 'yearOfDeath')){
+      curr_obj.yearOfDeath = 2026;
+    }
+    return curr_obj;
+  });
+  mapped.sort((a, b) =>{
+   return (b.yearOfDeath - b.yearOfBirth) - (a.yearOfDeath - a.yearOfBirth);
+  });
+
+  return mapped[0];
+};
+
+
+console.log(findTheOldest(people));
+
+//TODO find out whats going on with the mapped array
