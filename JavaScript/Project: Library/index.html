@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "styles.css" rel = "stylesheet">
+  <title>YZ | Library</title>
+</head>
+<body>
+    <body>
+    <div class="header">
+      <ul class="first-left-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Store</a></li>
+      </ul>
+      <ul class="first-right-links">
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <img class = "logo" src="./logo.svg" alt="Project logo. Represents my company with the project name.">
+      
+      
+      <div class="input">
+        <input class = "searchBar" type="text" placeholder="Search library">
+      </div>
+      <div class="buttons">
+        <button class = "add-book">Add Book</button>
+        <button class = "search-book">Search</button>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="left-links">
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Business</a></li>
+      </ul>
+      <ul class="right-links">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+    <!--modal-->
+    <dialog class = "modal">
+      <form>
+        <div class = "top-row">
+      <button type = "button" class="close-button">✖</button>
+      </div>
+       <h3>Add a Book</h3>
+      <label for="title"><input class ="title" "type="text" placeholder="Book Title"></label>
+      <label for="author"><input class ="author" "type="text" placeholder="Book Author"></label>
+      <label for="num-pages"><input class ="num-pages" "type="text" placeholder="Number of Pages"></label>
+        <p>Have you read it?</p>
+          <label for="yes">Yes<input name = 'read' class ="yes" value = "yes" type="radio"></label>
+          <label for="no">No<input name = 'read' class ="no" value = "no" type="radio"></label>
+      <button class = "submit" type = "submit">Submit</button>
+     </form>
+    </dialog>
+  </body>
+</html>
+</body>
+<script src = "script.js"></script>
+</html>
+
+
