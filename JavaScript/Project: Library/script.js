@@ -94,7 +94,6 @@ function displayBook(book){
   });
 }
 
-
 searchBook.addEventListener("mouseenter", function (){
   searchBar.placeholder = "Search Library"
 });
@@ -125,7 +124,6 @@ submitButton.addEventListener("click", function(event){
   addBookToLibrary(book);
 });
 
-
 searchBook.addEventListener("click", function(){
   searchModal.showModal();
   for(let i = 0; i<myLibrary.length; i++){
@@ -138,8 +136,6 @@ searchBook.addEventListener("click", function(){
     for(let i = 0; i<tableBody.children.length; i++){
       const row = tableBody.children[i];
       const rowTitle = row.children[1]; //second title cell
-      console.log(rowTitle.textContent);
-      console.log(title);
       for(let i =0; i<row.children.length; i++){
         row.children[i].classList.remove("highlight");
       }
@@ -150,11 +146,9 @@ searchBook.addEventListener("click", function(){
       }
     }
   }
-  
 });
 
 closeButton2.addEventListener("click", function(){
-
   searchModal.close();
 });
 
