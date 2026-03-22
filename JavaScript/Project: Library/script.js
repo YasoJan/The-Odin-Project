@@ -5,6 +5,22 @@ By: Yasin Zahir
 
 const myLibrary = [];
 let id = 0;
+const submitButton = document.querySelector(".submit");
+const bookTitle = document.querySelector(".title");
+const author = document.querySelector(".author");
+const numPages = document.querySelector(".num-pages");
+const read = document.querySelector('input[name="read"]:checked');
+let readValue;
+const tableBody = document.querySelector("tbody");
+
+const searchBar = document.querySelector(".searchBar");
+const searchBook = document.querySelector(".search-book");
+const addBook = document.querySelector(".add-book");
+const title = document.querySelector(".title");
+const dialog = document.querySelector(".modal");
+const closeButton = document.querySelector(".close-button");
+const searchModal = document.querySelector(".search-modal");
+const closeButton2 = document.querySelector(".close-button2");
 
 function Book(title, author, num_pages, read){
   this.title = title;
@@ -17,64 +33,86 @@ function Book(title, author, num_pages, read){
   }
   id+=1;
 }
-// Sample inputs
-/*
-const hp_poa = new Book("Harry Potter & The Prisoner of Azkaban", "J.K. Rowling", "504", true);
-addBookToLibrary(hp_poa);
 
-const hp_cos = new Book("Harry Potter & The Chamber of Secrets", "J.K. Rowling", "389", true);
-addBookToLibrary(hp_cos);
-*/
-function addBookToLibrary(book) {
-  // take params, create a book then store it in the array
+function addBookToLibrary(book){
   myLibrary.push(book);
+  displayBook(book);
 }
 
-//displayBook();
-// Write a function that loops through the array and displays each book on the page. 
-// You can display them in some sort of table, or each on their own “card”. 
-// It might help for now to manually add a few books to your array so you can see the display.
+function displayBook(book){
 
+  const tableRow = document.createElement("tr");
+  tableBody.appendChild(tableRow)
+  
+  const tableDataID = document.createElement("td");
+  tableDataID.textContent = book.id;
+  tableRow.appendChild(tableDataID);
+  
+  const tableDataTitle = document.createElement("td");
+  tableDataTitle.textContent = book.title;
+  tableRow.appendChild(tableDataTitle);
 
-function displayBook(){
-  for(let i =0; i<myLibrary.length; i++){
-    alert(myLibrary[i].title);
-  }
+  const tableDataAuthor = document.createElement("td");
+  tableDataAuthor.textContent = book.author;
+  tableRow.appendChild(tableDataAuthor);
+
+  const tableDataNumPages = document.createElement("td");
+  tableDataNumPages.textContent = book.num_pages;
+  tableRow.appendChild(tableDataNumPages);
+
+  const tableDataReadBook = document.createElement("td");
+  tableDataReadBook.textContent = book.read;
+  tableRow.appendChild(tableDataReadBook);
+
+  const tableDeleteCell = document.createElement("td");
+  const deleteButton = document.createElement("button");
+  tableDeleteCell.appendChild(deleteButton);
+  tableRow.appendChild(tableDeleteCell);
+
+  deleteButton.addEventListener("click", function(){
+    while(tableRow.firstChild){
+      tableRow.removeChild(tableRow.firstChild);
+    }
+    myLibrary.splice(book.id, 1);
+  });
+
+  const tableReadStatus = document.createElement("td");
+  const readStatusButton = document.createElement("button");
+  tableReadStatus.appendChild(readStatusButton);
+  tableRow.appendChild(tableReadStatus);
+
+  readStatusButton.addEventListener("click", function(){
+    if(book.read.toLowerCase() == "yes"){
+      book.read = "no";
+      tableDataReadBook.textContent = "no"
+    }
+    else if(book.read.toLowerCase() == "no"){
+      book.read = "yes";
+      tableDataReadBook.textContent = "yes";
+    }
+    
+  });
 }
 
-const searchBar = document.querySelector(".searchBar");
 
-const searchBook = document.querySelector(".search-book");
-if(searchBook.addEventListener("mouseenter", function (){
+searchBook.addEventListener("mouseenter", function (){
   searchBar.placeholder = "Search Library"
-}));
-
-const addBook = document.querySelector(".add-book");
+});
 
 addBook.addEventListener("mouseenter", function (){
   searchBar.placeholder = "Add to Library"
 });
 
-const title = document.querySelector(".title");
-const dialog = document.querySelector(".modal");
 addBook.addEventListener("click", function (){
   dialog.showModal();
   title.value = searchBar.value;
 });
-
-const closeButton = document.querySelector(".close-button");
 
 closeButton.addEventListener("click", function(event){
   event.preventDefault();
   dialog.close();
 });
 
-const submitButton = document.querySelector(".submit");
-const bookTitle = document.querySelector(".title");
-const author = document.querySelector(".author");
-const numPages = document.querySelector(".num-pages");
-const read = document.querySelector('input[name="read"]:checked');
-let readValue;
 if(read){
   readValue = read.value
 } 
@@ -85,10 +123,39 @@ submitButton.addEventListener("click", function(event){
   event.preventDefault();
   let book = new Book(bookTitle.value, author.value, numPages.value, readValue);
   addBookToLibrary(book);
-  displayBook();
 });
 
+
 searchBook.addEventListener("click", function(){
-  displayBook();
+  searchModal.showModal();
+  for(let i = 0; i<myLibrary.length; i++){
+    if(myLibrary[i].title == searchBar.value){
+      highlight(searchBar.value);
+
+    }
+  }
+  function highlight(title){
+    for(let i = 0; i<tableBody.children.length; i++){
+      const row = tableBody.children[i];
+      const rowTitle = row.children[1]; //second title cell
+      console.log(rowTitle.textContent);
+      console.log(title);
+      for(let i =0; i<row.children.length; i++){
+        row.children[i].classList.remove("highlight");
+      }
+      if(rowTitle.textContent.trim().toLowerCase() === title.trim().toLowerCase()){
+        for(let i =0; i<row.children.length; i++){
+          row.children[i].classList.add("highlight");
+        }
+      }
+    }
+  }
+  
 });
+
+closeButton2.addEventListener("click", function(){
+
+  searchModal.close();
+});
+
 
