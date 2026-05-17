@@ -1,0 +1,46 @@
+/*
+Matt Bricston's modern-normalize reset: 
+Link: https://mattbrictson.com/blog/css-normalize-and-reset
+
+"Browsers have improved in recent years and the differences between them are small, but there are still enough surprises that a normalize stylesheet is worthwhile. Following in the footsteps of Tailwind’s Preflight, I recommend using a concise, well-tested library like modern-normalize.
+
+In terms of a reset, most off-the-shelf resets do too much. Figure out what browser defaults cause you the most grief and target just those elements and properties with your own reset.
+
+Here’s my typical reset stylesheet in its entirety:"
+*/
+
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img { /*This ensures that large images shrink to fit within their container, instead of overflowing and causing layout problems.*/
+  display: block;
+  max-inline-size: 100%;
+}
+
+/*
+Here’s what I appreciate about modern-normalize:
+
+It disables the weird -webkit-text-size-adjust behavior on iOS that causes text to zoom when the device is rotated from portrait to landscape.
+It sets system-ui as the default font (with fallbacks) for a clean, modern look; much nicer than Times New Roman.
+It ensures that form inputs and buttons match the document’s font and text size (font-family: inherit and font-size: 100%).
+It removes the default margin on the <body> element.
+It globally applies box-sizing: border-box. Yay!
+Otherwise, modern-normalize tracks browser defaults very closely and is relatively un-opinionated, as compared to something like sanitize.css.
+*/
